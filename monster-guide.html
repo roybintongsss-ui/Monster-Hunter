@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>怪物图鉴 - MH荒野全攻略</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar">
+<div class="nav-container">
+<a href="index.html" class="nav-logo"><span class="logo-icon">🎮</span><span class="logo-text">MH荒野攻略</span></a>
+<button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+<ul class="nav-menu" id="navMenu">
+<li><a href="index.html" class="nav-link">首页</a></li>
+<li><a href="main-quest.html" class="nav-link">主线任务</a></li>
+<li><a href="side-quest.html" class="nav-link">支线任务</a></li>
+<li><a href="monster-guide.html" class="nav-link active">怪物图鉴</a></li>
+<li><a href="index.html#footer" class="nav-link">关于</a></li>
+</ul>
+</div>
+</nav>
+<header class="page-hero"><div class="page-hero-bg"></div><div class="container">
+<h1>🐉 怪物图鉴</h1><p>全怪物弱点属性、素材掉落、招式拆解与高效打法</p>
+</div></header>
+<main class="quest-page"><div class="container">
+<div class="monster-filter">
+<h2>🔍 筛选怪物</h2>
+<div class="filter-buttons">
+<button class="filter-btn active" data-filter="all">全部</button>
+<button class="filter-btn" data-filter="throne">飞龙种</button>
+<button class="filter-btn" data-filter="bird">鸟龙种</button>
+<button class="filter-btn" data-filter="beast">兽龙种</button>
+<button class="filter-btn" data-filter="fish">鱼龙种</button>
+<button class="filter-btn" data-filter="dragon">古龙种</button>
+</div>
+</div>
+<div class="monster-grid">
+<article class="monster-card" data-type="beast">
+<div class="monster-card-img"><img src="images/monster-linxi.svg" alt="怪物图鉴" class="scene-img"></div>
+<div class="monster-card-body">
+<h3>林西刃爪</h3>
+<span class="monster-class">兽龙种</span>
+<div class="monster-weakness">
+<span class="weakness weak-thunder">雷 ⚡ 特攻</span>
+<span class="weakness weak-fire">火 🔥 有效</span>
+</div>
+<div class="monster-drops">
+<h4>主要素材</h4>
+<ul>
+<li>林西刃爪甲</li>
+<li>林西刃爪爪</li>
+<li>林西刃爪皮</li>
+</ul>
+</div>
+<button class="monster-detail-btn" onclick="toggleMonsterDetail(this)">查看打法 →</button>
+<div class="monster-detail">
+<h4>📋 打法策略</h4>
+<p>林西刃爪是敏捷型怪物，主要攻击方式为快速连击和突袭。</p>
+<h5>招式拆解</h5>
+<ul>
+<li><strong>前扑咬</strong> - 向前猛冲咬击，向侧面闪避即可</li>
+<li><strong>旋风斩</strong> - 旋转身体形成范围攻击，后退拉开距离</li>
+<li><strong>尾巴扫</strong> - 低角度横扫，跳跃躲避</li>
+</ul>
+<h5>高效打法</h5>
+<p>使用雷属性武器攻击头部，积累断尾机会。等它使用前扑咬后硬直时输出。牙猎犬可以牵制它的行动。</p>
+</div>
+</div>
+</article>
+<article class="monster-card" data-type="fish">
+<div class="monster-card-img"><img src="images/monster-shahai.svg" alt="怪物图鉴" class="scene-img"></div>
+<div class="monster-card-body">
+<h3>沙海龙</h3>
+<span class="monster-class">鱼龙种</span>
+<div class="monster-weakness">
+<span class="weakness weak-sound">音爆弹 有效</span>
+<span class="weakness weak-water">水 ❄️ 有效</span>
+</div>
+<div class="monster-drops">
+<h4>主要素材</h4>
+<ul>
+<li>沙海龙甲</li>
+<li>沙海龙鳍</li>
+<li>沙海龙鳞</li>
+</ul>
+</div>
+<button class="monster-detail-btn" onclick="toggleMonsterDetail(this)">查看打法 →</button>
+<div class="monster-detail">
+<h4>📋 打法策略</h4>
+<p>沙海龙擅长在沙中潜行，会突然从地下钻出发动攻击。</p>
+<h5>招式拆解</h5>
+<ul>
+<li><strong>沙中突袭</strong> - 从地下钻出咬击，注意地面波纹</li>
+<li><strong>沙暴</strong> - 掀起沙尘降低视野，趁机攻击</li>
+<li><strong>潜地逃跑</strong> - 血量低时会潜入沙中逃跑</li>
+</ul>
+<h5>高效打法</h5>
+<p>使用音爆弹逼它现身，趁硬直时集中输出。雷属性武器对它效果很好。</p>
+</div>
+</div>
+</article>
+<article class="monster-card" data-type="dragon">
+<div class="monster-card-img"><img src="images/monster-canghai.svg" alt="怪物图鉴" class="scene-img"></div>
+<div class="monster-card-body">
+<h3>苍海龙</h3>
+<span class="monster-class">古龙种</span>
+<div class="monster-weakness">
+<span class="weakness weak-thunder">雷 ⚡ 特攻</span>
+<span class="weakness weak-ice">冰 ❄️ 有效</span>
+</div>
+<div class="monster-drops">
+<h4>主要素材</h4>
+<ul>
+<li>苍海龙逆鳞</li>
+<li>海龙水晶</li>
+<li>苍海龙翼</li>
+</ul>
+</div>
+<button class="monster-detail-btn" onclick="toggleMonsterDetail(this)">查看打法 →</button>
+<div class="monster-detail">
+<h4>📋 打法策略</h4>
+<p>苍海龙是强大的古龙，掌控水的力量，在水下和陆地上都有不同攻击方式。</p>
+<h5>招式拆解</h5>
+<ul>
+<li><strong>水柱喷发</strong> - 从地面喷出高压水柱，跳跃躲避</li>
+<li><strong>漩涡</strong> - 制造漩涡将猎人吸入，需要快速脱离</li>
+<li><strong>水遁</strong> - 瞬间移动到水中另一位置</li>
+</ul>
+<h5>高效打法</h5>
+<p>尽量在水面以上战斗，避免被卷入漩涡。雷属性武器对它效果显著。</p>
+</div>
+</div>
+</article>
+<article class="monster-card" data-type="dragon">
+<div class="monster-card-img"><img src="images/monster-yanwang.svg" alt="怪物图鉴" class="scene-img"></div>
+<div class="monster-card-body">
+<h3>炎王龙</h3>
+<span class="monster-class">古龙种</span>
+<div class="monster-weakness">
+<span class="weakness weak-ice">冰 ❄️ 特攻</span>
+<span class="weakness weak-wind">风 💨 有效</span>
+</div>
+<div class="monster-drops">
+<h4>主要素材</h4>
+<ul>
+<li>炎王龙之鳞</li>
+<li>炎王龙之角</li>
+<li>炎王龙逆鳞</li>
+</ul>
+</div>
+<button class="monster-detail-btn" onclick="toggleMonsterDetail(this)">查看打法 →</button>
+<div class="monster-detail">
+<h4>📋 打法策略</h4>
+<p>炎王龙是火山地带的霸主，全身覆盖熔岩，拥有毁灭性的火焰攻击。</p>
+<h5>招式拆解</h5>
+<ul>
+<li><strong>熔岩吐息</strong> - 向前方喷射熔岩，向两侧闪避</li>
+<li><strong>地震</strong> - 用身体砸地引发地震，跳跃躲避</li>
+<li><strong>火焰旋风</strong> - 旋转身体形成火焰旋风，远离它</li>
+</ul>
+<h5>高效打法</h5>
+<p>冰属性武器是最佳选择。等它释放熔岩吐息后的硬直期大量输出。注意躲避地震。</p>
+</div>
+</div>
+</article>
+<article class="monster-card" data-type="dragon">
+<div class="monster-card-img"><img src="images/monster-fatalis.svg" alt="怪物图鉴" class="scene-img"></div>
+<div class="monster-card-body">
+<h3>煌黑龙</h3>
+<span class="monster-class">古龙种</span>
+<div class="monster-weakness">
+<span class="weakness weak-ice">冰 ❄️ 特攻</span>
+<span class="weakness weak-thunder">雷 ⚡ 有效</span>
+</div>
+<div class="monster-drops">
+<h4>主要素材</h4>
+<ul>
+<li>煌黑龙之鳞</li>
+<li>煌黑龙之逆鳞</li>
+<li>煌黑龙之翼</li>
+<li>煌黑龙之角</li>
+</ul>
+</div>
+<button class="monster-detail-btn" onclick="toggleMonsterDetail(this)">查看打法 →</button>
+<div class="monster-detail">
+<h4>📋 打法策略</h4>
+<p>最终BOSS，拥有龙属性和雷属性双重能力的终极怪物。战斗分为两个阶段。</p>
+<h5>第一阶段</h5>
+<ul>
+<li><strong>龙息</strong> - 大范围龙属性吐息，需要快速闪避</li>
+<li><strong>翼击</strong> - 用翅膀扇出龙属性冲击波</li>
+<li><strong>尾锤</strong> - 强力尾鞭攻击，注意躲避范围</li>
+</ul>
+<h5>第二阶段</h5>
+<p>血量50%后获得雷属性，攻击速度大幅提升。</p>
+<ul>
+<li><strong>雷龙息</strong> - 新增雷属性吐息，与龙息交替使用</li>
+<li><strong>雷云</strong> - 召唤雷云落下闪电</li>
+<li><strong>超带电</strong> - 全身带电，接触即受伤</li>
+</ul>
+<h5>高效打法</h5>
+<p>全程使用冰属性武器。第一阶段集中输出头部，第二阶段注意走位。利用牙猎龙骑乘打断它的强力招式。带足解毒药和强效治疗药。</p>
+</div>
+</div>
+</article>
+<article class="monster-card" data-type="bird">
+<div class="monster-card-img"><img src="images/monster-rongyan.svg" alt="怪物图鉴" class="scene-img"></div>
+<div class="monster-card-body">
+<h3>熔岩龙</h3>
+<span class="monster-class">鸟龙种</span>
+<div class="monster-weakness">
+<span class="weakness weak-ice">冰 ❄️ 特攻</span>
+<span class="weakness weak-water">水 💧 有效</span>
+</div>
+<div class="monster-drops">
+<h4>主要素材</h4>
+<ul>
+<li>熔岩龙甲</li>
+<li>熔岩龙翼膜</li>
+<li>熔岩龙鳞</li>
+</ul>
+</div>
+<button class="monster-detail-btn" onclick="toggleMonsterDetail(this)">查看打法 →</button>
+<div class="monster-detail">
+<h4>📋 打法策略</h4>
+<p>熔岩龙是一种小型飞龙，经常群居活动。虽然个体不强，但群体攻击很危险。</p>
+<h5>招式拆解</h5>
+<ul>
+<li><strong>火焰吐息</strong> - 近距离喷射小火球</li>
+<li><strong>俯冲</strong> - 从空中俯冲抓击</li>
+<li><strong>群体围攻</strong> - 多只熔岩龙同时攻击</li>
+</ul>
+<h5>高效打法</h5>
+<p>先解决小怪再集中攻击首领。冰属性武器效果最好。注意不要被包围。</p>
+</div>
+</div>
+</article>
+</div>
+</div></main>
+<footer class="footer"><div class="container">
+<div class="footer-content">
+<div class="footer-brand"><h3>🎮 MH荒野攻略站</h3><p>最全的《怪物猎人：荒野》图文攻略</p></div>
+<div class="footer-links"><h4>快速链接</h4><a href="index.html">返回首页</a><a href="main-quest.html">主线任务攻略</a><a href="side-quest.html">支线任务攻略</a></div>
+</div>
+<div class="footer-bottom"><p>&copy; 2025 怪物猎人：荒野攻略站 | 游戏版权归 CAPCOM 所有</p></div>
+</div></footer>
+<script src="script.js"></script>
+</body></html>
